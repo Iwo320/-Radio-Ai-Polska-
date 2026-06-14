@@ -1,6 +1,5 @@
 [
-  { "title": "Kubek Stygnie",   "src": "songs/Kubek stygnie.mp3"   },
-  { "title": "Szary Jedwab",   "src": "songs/Szary Jedwab.mp3"   },
-  { "title": "Bez Twojej Mapy",      "src": "songs/Bez Twojej Mapy.mp3"      }
-  { "title": "Światło Po Deszczu",   "src": "songs/Swiatlo Po Deszczu.mp3"
+  { "title": "Nocna Ballada",  "src": "songs/nocna-ballada.mp3"  },
+  { "title": "Złoty Wieczór",  "src": "songs/zloty-wieczor.mp3"  },
+  { "title": "Cisza Lasu",     "src": "songs/cisza-lasu.mp3"     }
 ]
