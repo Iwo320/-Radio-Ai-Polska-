@@ -1,6 +1,6 @@
 [
-  { "title": "Kubek Stygnie",  "src": "songs/Kubek stygnie.mp3"  },
-  { "title": "Szary Jedwab",  "src": "songs/Szary Jedwab.mp3"  },
-  { "title": "Światło Po Deszczu",  "src": "songs/Światło po deszczu.mp3"  },
-  { "title": "Bez Twojej Mapy",     "src": "songs/Bez Twojej Mapy.mp3"     }
+  { "title": "Kubek Stygnie", "src": "songs/kubek-stygnie.mp3" },
+  { "title": "Szary Jedwab", "src": "songs/szary-jedwab.mp3" },
+  { "title": "Światło Po deszczu", "src": "songs/Światło po deszczu.mp3" },
+  { "title": "Bez Twojej Mapy", "src": "songs/bez-twojej-mapy.mp3" }
 ]
