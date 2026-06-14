@@ -217,7 +217,6 @@ const FALLBACK_TRACKS = [
   { title: "Szary Jedwab",     src: "songs/Szary Jedwab.mp3"   },
   { title: "Bez Twojej Mapy",  src: "songs/Bez Twojej Mapy.mp3"},
 ];
-// ─────────────────────────────────────────────
 
 function closeMMenu(){ document.getElementById('mmenu').classList.remove('open'); }
 document.getElementById('burgerBtn').addEventListener('click', ()=>{
@@ -233,8 +232,9 @@ function shuffle(a){
   return b;
 }
 
-let queue = [];
-let qIdx  = 0;
+let allTracks = [];
+let queue     = [];
+let qIdx      = 0;
 
 const audio      = new Audio();
 audio.volume     = 0.7;
@@ -305,8 +305,13 @@ function loadTrack(idx){
 }
 
 function nextTrack(){
-  qIdx=(qIdx+1)%queue.length;
-  if(qIdx===0) queue=shuffle(queue);
+  qIdx++;
+  if(qIdx >= queue.length){
+    // Przemieszaj ale upewnij się że pierwsza != ostatnio grana
+    const last = queue[queue.length - 1];
+    do { queue = shuffle(allTracks); } while(queue[0].src === last.src && allTracks.length > 1);
+    qIdx = 0;
+  }
   loadTrack(qIdx);
   audio.play().catch(()=>{});
 }
@@ -352,6 +357,7 @@ elWrap.addEventListener('click',(e)=>{
 
 // Start — próbuj songs.json, jeśli błąd użyj FALLBACK_TRACKS
 function startPlayer(tracks){
+  allTracks = tracks;
   queue = shuffle(tracks);
   qIdx  = 0;
   loadTrack(0);
